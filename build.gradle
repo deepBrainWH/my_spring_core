@@ -33,7 +33,7 @@ configure(allprojects) { project ->
 
 	ext.aspectjVersion       = "1.8.9"
 	ext.caffeineVersion      = "2.3.5"
-	ext.eclipselinkVersion   = "2.4.2"
+//	ext.eclipselinkVersion   = "2.4.2"
 	ext.ehcacheVersion       = "2.10.4"
 	ext.ehcachejcacheVersion = "1.0.1"
 	ext.ehcache3Version      = "3.1.4"
@@ -164,31 +164,11 @@ configure(subprojects - project(":spring-build-src")) { subproject ->
 		}
 	}
 
-//	javadoc {
-//		description = "Generates project-level javadoc for use in -javadoc jar"
-//
-//		options.memberLevel = org.gradle.external.javadoc.JavadocMemberLevel.PROTECTED
-//		options.author = true
-//		options.header = project.name
-////		options.links(project.ext.javadocLinks)
-//		options.addStringOption('Xdoclint:none', '-quiet')
-//
-//		// Suppress warnings due to cross-module @see and @link references.
-//		// Note that global 'api' task does display all warnings.
-//		logging.captureStandardError LogLevel.INFO
-//		logging.captureStandardOutput LogLevel.INFO  // suppress "## warnings" message
-//	}
-
 	task sourcesJar(type: Jar, dependsOn: classes) {
 		classifier = 'sources'
 		from sourceSets.main.allSource
 		// Don't include or exclude anything explicitly by default. See SPR-12085.
 	}
-
-//	task javadocJar(type: Jar) {
-//		classifier = "javadoc"
-//		from javadoc
-//	}
 
 	artifacts {
 		archives sourcesJar
@@ -406,15 +386,6 @@ project("spring-context") {
 		testCompile("commons-dbcp:commons-dbcp:1.4")
 		testCompile("org.apache.commons:commons-pool2:2.4.2")
 		testCompile("org.slf4j:slf4j-api:${slf4jVersion}")
-	}
-}
-
-project("spring-framework-learning-wangheng"){
-	description = "learn spring framework."
-
-	dependencies {
-		compile(project(":spring-core"))
-		compile(project(":spring-beans"))
 	}
 }
 
