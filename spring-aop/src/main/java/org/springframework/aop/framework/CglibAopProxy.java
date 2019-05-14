@@ -39,6 +39,7 @@ import org.springframework.aop.TargetSource;
 import org.springframework.aop.support.AopUtils;
 import org.springframework.cglib.core.ClassGenerator;
 import org.springframework.cglib.core.CodeGenerationException;
+import org.springframework.cglib.core.NamingPolicy;
 import org.springframework.cglib.core.SpringNamingPolicy;
 import org.springframework.cglib.proxy.Callback;
 import org.springframework.cglib.proxy.CallbackFilter;
@@ -184,7 +185,7 @@ class CglibAopProxy implements AopProxy, Serializable {
 			}
 			enhancer.setSuperclass(proxySuperClass);
 			enhancer.setInterfaces(AopProxyUtils.completeProxiedInterfaces(this.advised));
-			enhancer.setNamingPolicy(SpringNamingPolicy.INSTANCE);
+			enhancer.setNamingPolicy((NamingPolicy) SpringNamingPolicy.INSTANCE);
 			enhancer.setStrategy(new ClassLoaderAwareUndeclaredThrowableStrategy(classLoader));
 
 			Callback[] callbacks = getCallbacks(rootClass);
