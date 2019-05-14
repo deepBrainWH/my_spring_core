@@ -33,7 +33,6 @@ configure(allprojects) { project ->
 
 	ext.aspectjVersion       = "1.8.9"
 	ext.caffeineVersion      = "2.3.5"
-//	ext.eclipselinkVersion   = "2.4.2"
 	ext.ehcacheVersion       = "2.10.4"
 	ext.ehcachejcacheVersion = "1.0.1"
 	ext.ehcache3Version      = "3.1.4"
@@ -129,7 +128,6 @@ configure(allprojects) { project ->
 		testCompile("org.hamcrest:hamcrest-all:${hamcrestVersion}")
 
 		sniffer("org.codehaus.mojo:animal-sniffer-ant-tasks:${snifferVersion}")
-		javaApiSignature("org.codehaus.mojo.signature:java16:1.1@signature")  // API level from JDK 6 update 18
 	}
 }
 
