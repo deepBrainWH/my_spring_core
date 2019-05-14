@@ -15,8 +15,8 @@ public class BeanFactoryTest {
 //		beanFactoryTest.beanSorre();
 //		beanFactoryTest.dependencyTest();
 //		beanFactoryTest.dependencyTest1();
-		beanFactoryTest.dependencyTest2();
-//		beanFactoryTest.getBeanTest();
+//		beanFactoryTest.dependencyTest2();
+		beanFactoryTest.getBeanTest();
 
 
 	}
@@ -71,13 +71,16 @@ public class BeanFactoryTest {
 		System.out.println(bean);
 	}
 
+	/**
+	 * 自动注入Bean.
+	 */
 	private void getBeanTest(){
 		DefaultListableBeanFactory factory = new DefaultListableBeanFactory();
 
 		XmlBeanDefinitionReader xmlBeanDefinitionReader = new XmlBeanDefinitionReader(factory);
 		xmlBeanDefinitionReader.loadBeanDefinitions("spring.xml");
 
-		UserServiceImp bean = factory.getBean(UserServiceImp.class);
+		UserServiceImp bean = (UserServiceImp)factory.getBean("userServiceImp");
 		Assert.notNull(bean, "Bean not  null");
 		System.out.println(bean.getUserDao());
 

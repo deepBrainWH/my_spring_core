@@ -302,6 +302,7 @@ project("spring_learning") {
 		testCompile("log4j:log4j:${log4jVersion}")
 	}
 }
+
 project("spring-beans-groovy") {
 	description "Groovy Bean Definitions"
 
