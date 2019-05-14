@@ -7,7 +7,7 @@ include "spring-context"
 include "spring-core"
 include "spring-expression"
 include "spring-instrument"
-include "spring_learning"
+include "spring-learning"
 
 
 // Exposes gradle buildSrc for IDE support

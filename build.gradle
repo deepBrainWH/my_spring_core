@@ -291,7 +291,7 @@ project("spring-beans") {
 	}
 }
 
-project("spring_learning") {
+project("spring-learning") {
 	description = "Spring learning"
 
 	dependencies {
