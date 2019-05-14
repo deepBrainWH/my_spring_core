@@ -16,10 +16,8 @@ spring-test/test-output/
 argfile*
 pom.xml
 activemq-data/
-**/build/
 **/*.iml
 /build
-buildSrc/build
 /spring-*/build
 /src/asciidoc/build
 target/
@@ -30,7 +28,6 @@ target/
 spring-*/src/main/java/META-INF/MANIFEST.MF
 
 # IDEA artifacts and output dirs
-*.iml
 *.ipr
 *.iws
 .idea
@@ -38,3 +35,4 @@ out
 test-output
 atlassian-ide-plugin.xml
 .gradletasknamecache
+spring-framework-learning-wangheng/
