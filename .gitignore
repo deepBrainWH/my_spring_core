@@ -1,12 +1,10 @@
 .settings
 .springBeans
 jmx.log
-derby.log
 .gradle
 **/*.iml
 /build
 /spring-*/build
 /src/asciidoc/build
-target/
 .idea
 out

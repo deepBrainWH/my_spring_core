@@ -1,6 +1,5 @@
-package bean;
+package com.wangheng.bean;
 
-import org.junit.Test;
 import org.springframework.beans.factory.support.AbstractBeanDefinition;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
@@ -80,7 +79,7 @@ public class BeanFactoryTest {
 		XmlBeanDefinitionReader xmlBeanDefinitionReader = new XmlBeanDefinitionReader(factory);
 		xmlBeanDefinitionReader.loadBeanDefinitions("spring.xml");
 
-		UserServiceImp bean = (UserServiceImp)factory.getBean("userServiceImp");
+		UserServiceImp bean = factory.getBean(UserServiceImp.class);
 		Assert.notNull(bean, "Bean not  null");
 		System.out.println(bean.getUserDao());
 

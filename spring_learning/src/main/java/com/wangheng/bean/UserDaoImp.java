@@ -1,4 +1,4 @@
-package bean;
+package com.wangheng.bean;
 
 public class UserDaoImp implements UserDao {
 

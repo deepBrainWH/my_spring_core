@@ -5,9 +5,10 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean name="userServiceImp" scope="prototype" class="bean.UserServiceImp" depends-on="userDao" autowire="byType"/>
+    <bean name="userDao" class="com.wangheng.bean.UserDaoImp"/>
 
-    <bean name="userDao" class="bean.UserDaoImp"/>
+    <bean scope="prototype" class="com.wangheng.bean.UserServiceImp" depends-on="userDao" autowire="byType"/>
+
 
 
 
