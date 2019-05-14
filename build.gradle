@@ -291,6 +291,17 @@ project("spring-beans") {
 	}
 }
 
+project("spring_learning") {
+	description = "Spring learning"
+
+	dependencies {
+		compile(project(":spring-core"))
+		compile(files(project(":spring-core").cglibRepackJar))
+		compile(project(":spring-beans"))
+		compile group: 'junit', name: 'junit', version: '4.12'
+		testCompile("log4j:log4j:${log4jVersion}")
+	}
+}
 project("spring-beans-groovy") {
 	description "Groovy Bean Definitions"
 
