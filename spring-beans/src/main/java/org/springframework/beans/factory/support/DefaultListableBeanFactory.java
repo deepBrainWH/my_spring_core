@@ -965,6 +965,7 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
 
 	/**
 	 * Remove any assumptions about by-type mappings.
+	 *
 	 */
 	private void clearByTypeCache() {
 		this.allBeanNamesByType.clear();
